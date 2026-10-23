@@ -5,8 +5,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 
-// Modelos de datos necesarios para la interfaz
-data class VueloModel(
+class VueloModel(
     val fecha: String,
     val horario: String,
     val base: String,
