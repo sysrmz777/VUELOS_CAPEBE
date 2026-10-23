@@ -1,4 +1,23 @@
-package com.example.appvuelos_capebe.ui.viewModel 
+package com.example.appvuelos_capebe.ui.viewModel
+
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
+import androidx.lifecycle.ViewModel
+
+// Modelos de datos necesarios para la interfaz
+data class VueloModel(
+    val fecha: String,
+    val horario: String,
+    val base: String,
+    val aeronave: String
+)
+
+data class CalendarioModel(
+    val vuelos: List<VueloModel> = emptyList(),
+    val vuelosGuardados: List<VueloModel> = emptyList(),
+    val vueloElegido: VueloModel? = null
+)
 
 class CalendarioViewModel : ViewModel() {
 
